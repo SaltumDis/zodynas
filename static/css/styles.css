@@ -1,0 +1,154 @@
+html,body {
+  height:100%;
+  min-height:100%;
+  background-color:#110022;
+  color:#eee;
+  font-size: 15px;
+}
+
+h1 {
+  font-family: Arial,sans-serif;
+  font-size:50px;
+  color:#DDCCEE;
+}
+
+.lead {
+	color:#DDCCEE;
+}
+
+
+/* Custom container */
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+  min-height:82%;
+  background-color:#110022;
+  color:#eee;
+  overflow:hidden;
+}
+
+.v-center {
+  margin-top:1%;
+}
+
+table{
+   margin: 0 auto;
+}
+
+ul {
+
+  display: inline;
+    width: 100%;
+  background-color:#110022;
+  color:#eee;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+}
+
+.menu li {
+    float: left;
+}
+
+.menu li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #DDCCEE;
+  color: #34071e;
+}
+
+
+.paddingLT {
+  float: none;
+    margin: 0 auto;
+      padding-top: 1em;
+  padding-left: 1em;
+}
+
+#sticky {
+  width:100%;
+  padding:18px;
+  padding-bottom:12px;
+  background:rgba(0, 0, 0, .2);
+  color: #b7a5ac;
+  font-size:14px;
+  text-align:right;
+  margin-right: 20em;
+  /*EFFECTS*/
+  transition:.33s linear;
+
+}
+
+#sticky a{
+    color: #b7a5ac;
+
+}
+#sticky:hover {
+  background:rgba(0, 0, 0, .6);
+}
+
+.login a{
+  color: #b7a5ac;
+  padding-right: 1em;
+  font-size: 1.5em;
+    position: absolute;
+    right: 0;
+}
+
+.loginmodal-container {
+  background:rgba(0, 0, 0, .8);
+  padding: 2em;
+
+}
+
+
+.loginmodal-container input{
+  margin-right: 1em;
+}
+
+.fa-home{
+  font-size: 4em;
+  color: white;
+}
+
+.fa-home:hover{
+color: gainsboro;
+  text-decoration: none;
+}
+
+.alert-danger{
+    float: right;
+    margin-right: 1em;
+    margin-top: 0.5em;
+}
+
+.form-centred{
+  margin-bottom: 15px;
+    display: inline-block;
+    float: none;
+    text-align: left;
+    margin-right: -4px;
+}
+
+.logout{
+    display: inline-block;
+    top: 1.5em;
+    right: 1em;
+    position: absolute;
+      color: #b7a5ac;
+
+}
+
+#delete{
+    width: 43%;
+    margin-right: 1em;
+}
+
+#update{
+    width: 50%;
+}

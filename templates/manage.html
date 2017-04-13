@@ -1,0 +1,32 @@
+
+{% extends "index.html" %}
+{% block name %}
+{% endblock %}
+{% block content %}
+<h1>Redaguoti žodį</h1>
+<br>
+    <div class="form-group form-centred col-md-2">
+                <button type="submit" id="delete" class="btn btn-default col-md-6"
+                               value="submit"><i class="fa fa-trash-o" > Ištrinti</i></button>
+                <button type="submit" id="update" class="btn btn-default col-md-6"
+                               value="submit"><i class="fa fa-floppy-o"> Atnaujinti</i></button>
+{% for word in dictionary %}
+      <label class="col-2 col-form-label">Angliškas žodis</label>
+      <div class="col-10">
+        <input id="english" name="{{id}}" class="form-control" type="text" value="{{word.english}}" >
+      </div>
+    </div>
+    {% for key, value in word.lithuanian.items() -%}
+    <div id="words" class="form-group form-centred col-md-2">
+      <label class="col-2 col-form-label">Lietuviškas žodis</label>
+      <div class="col-10">
+        <input class="form-control" id=lithuanian" type="text" value="{{key}}" >
+      </div>
+      <label class="col-2 col-form-label">Nuoroda</label>
+      <div class="col-10">
+        <input class="form-control" id="link" type="text" value="{{value}}" >
+      </div>
+    </div>
+    {%- endfor %}
+{% endfor %}
+{% endblock %}

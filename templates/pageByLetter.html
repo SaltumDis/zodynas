@@ -1,0 +1,43 @@
+
+{% extends "index.html" %}
+{% block name %}
+{% endblock %}
+{% block content %}
+<div id="dictionary">
+            <h1>{{letter}}</h1>
+            <br>
+            <br>
+            <table>
+                <thead>
+                <tr>
+                    <th class="text-right col-md-2">Angliškai</th>
+                    <th class="text-left col-md-2">Lietuviškai</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for word in dictionary %}
+                <tr>
+                    <td class="text-right col-md-2">
+                         {% if userName -%}
+                        <a href="/manage/{{ word.english }}" class="fa fa-pencil-square-o" aria-hidden="true"></a>
+                        {%- endif %}
+                        {{ word.english }}</td>
+                    <td class="text-left col-md-2">
+                        {% for key, value in word.lithuanian.items() -%}
+                        {% if value -%}
+                        <a href="{{ value }}">{{ key }}</a>
+                        {%- else -%}
+                        {{ key }}
+                        {%- endif %}
+                        {%- if not loop.last %},
+                        {% endif -%}
+                        {%- endfor %}
+                    </td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
